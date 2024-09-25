@@ -1,0 +1,7 @@
+.idea
+out/
+build/
+node_modules/
+public/config/api
+.env
+!.env.example

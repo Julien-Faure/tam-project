@@ -1,0 +1,47 @@
+{
+  "name": "tam-project",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@mdi/font": "^7.4.47",
+    "@types/moment": "^2.13.0",
+    "core-js": "^3.37.1",
+    "moment": "^2.30.1",
+    "vue-router": "^4.4.0",
+    "vuetify": "^3.6.13",
+    "vuex": "^4.1.0"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.22.15",
+    "@types/chai": "^4.2.15",
+    "@types/mocha": "^10.0.3",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-router": "^5.0.8",
+    "@vue/cli-plugin-typescript": "^5.0.8",
+    "@vue/cli-plugin-unit-mocha": "~5.0.0",
+    "@vue/cli-plugin-vuex": "~5.0.0",
+    "@vue/cli-service": "^5.0.8",
+    "@vue/eslint-config-typescript": "^12.0.0",
+    "@vue/test-utils": "^2.0.0-0",
+    "chai": "^4.2.0",
+    "eslint": "^8.57.0",
+    "fork-ts-checker-webpack-plugin": "^9.0.0",
+    "maska": "^2.1.11",
+    "sass": "^1.32.7",
+    "sass-loader": "^13.3.2",
+    "typescript": "^5.5.3",
+    "vue": "^3.4.32",
+    "vue-facing-decorator": "^3.0.4"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ]
+}

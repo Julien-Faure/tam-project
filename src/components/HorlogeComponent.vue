@@ -20,7 +20,7 @@ export default class HorlogeComponent extends Vue {
     private intervalId?: number;
 
     public async mounted(): Promise<void> {
-        this.intervalId = setInterval(() => {
+        this.intervalId = window.setInterval(() => {
             this.ui.text = moment().format("HH:mm:ss");
         }, 500);
     }

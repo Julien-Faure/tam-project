@@ -1,5 +1,6 @@
 import {createRouter, createWebHistory, RouteRecordRaw} from "vue-router";
 import HomeView from "@/views/HomeView.vue";
+import HotStopView from "@/views/HotStopView.vue";
 
 
 const routes: Array<RouteRecordRaw> = [
@@ -7,6 +8,14 @@ const routes: Array<RouteRecordRaw> = [
         path: "/",
         name: "home",
         component: HomeView,
+        meta: {
+            security: false
+        }
+    },
+    {
+        path: "/hot/lines/:lineId/:stopId",
+        name: "hot-stop",
+        component: HotStopView,
         meta: {
             security: false
         }

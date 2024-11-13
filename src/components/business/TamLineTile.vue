@@ -10,12 +10,13 @@
 import {Vue, Component, Prop} from 'vue-facing-decorator';
 import {isNotUndefined} from "@/utils/Types";
 import {linesColors} from "@/utils/TamColorMap";
+import {LineModel} from "@/models/LineModel";
 
 @Component({})
 export default class TamLineTile extends Vue {
 
   @Prop
-  private line?: string;
+  private line?: LineModel;
 
   // ------------------------------------------------------------------------------------------------------------------
 
@@ -28,9 +29,9 @@ export default class TamLineTile extends Vue {
 
   private async mounted() {
     if (isNotUndefined(this.line)) {
-      this.ui.text = this.line!;
+      this.ui.text = this.line!.name;
 
-      this.ui.color = linesColors.get(this.line!) ?? 'white';
+      this.ui.color = linesColors.get(this.line!.number) ?? 'white';
     } else {
       console.error('Unable to load TAM Line component because "line" is undefined.');
     }

@@ -9,9 +9,9 @@
 
 import {Component, Vue} from "vue-facing-decorator";
 import HorlogeComponent from "@/components/HorlogeComponent.vue";
-import {TamServiceImpl} from "@/services/TamServiceImpl";
 import {Context} from "@/Context";
 import TamLineTile from "@/components/business/TamLineTile.vue";
+import {LineModel} from "@/models/LineModel";
 
 @Component({
   components: {TamLineTile, HorlogeComponent}
@@ -20,12 +20,14 @@ import TamLineTile from "@/components/business/TamLineTile.vue";
 export default class HomeView extends Vue {
   private readonly tamService = Context.provideTamService();
 
-  private lines: string[] = [];
+  private lines: LineModel[] = [];
 
   private async mounted(): Promise<void> {
-    const lines = await this.tamService.getLines();
+    const lines = (await this.tamService.getLines()).filter(value => value.type === "tramway");
 
     this.lines = lines;
+
+    console.log(this.lines);
   }
 }
 </script>

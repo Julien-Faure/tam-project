@@ -1,10 +1,11 @@
-import {LineModel} from "@/models/LineModel";
-import {DelayModel} from "@/models/DelayModel";
-import {StopModel} from "@/models/StopModel";
+import {LineModelUnit} from "@/models/LineModelUnit";
+import {DelayModelUnit} from "@/models/DelayModelUnit";
+import {StopModelUnit} from "@/models/StopModelUnit";
+import {DelayStopModel} from "@/models/DelayStopModel";
 
 
 export interface TamService {
-    getLines() : Promise<LineModel[]>;
-    getDelayByLineAndStop(lineId : string, stopId : string) : Promise<DelayModel>;
-    getStop(stopId : string) : Promise<StopModel>;
+    getLines() : Promise<LineModelUnit[]>;
+    getStop(stopId : string) : Promise<StopModelUnit>;
+    getAllDSByLine(lineId : string) : Promise<DelayStopModel[]>;
 }

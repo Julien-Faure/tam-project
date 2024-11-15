@@ -1,12 +1,19 @@
 
 <template>
-    <v-timeline side="end">
+    <v-timeline side="end" dot-color="primary">
         <v-timeline-item
             v-for="item in ds"
             :key="item.stop.id"
             size="small"
         >
-            {{item.stop.name}}
+            <v-card width="500px">
+                <v-card-title>
+                    {{item.stop.name}}
+                </v-card-title>
+                <v-card-text>
+                    <v-chip color="primary" v-for="d in item.delay">{{ d.delayCount }} sec</v-chip>
+                </v-card-text>
+            </v-card>
         </v-timeline-item>
     </v-timeline>
 </template>

@@ -1,4 +1,4 @@
-export interface StopModel {
+export interface StopModelUnit {
     id : string,
     name : string
 }

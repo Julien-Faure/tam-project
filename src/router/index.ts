@@ -14,7 +14,7 @@ const routes: Array<RouteRecordRaw> = [
         }
     },
     {
-        path: "/hot/lines/:lineId",
+        path: "/hot/line/:lineId",
         name: "hot-line",
         component: HotLineView,
         meta: {
@@ -22,7 +22,7 @@ const routes: Array<RouteRecordRaw> = [
         }
     },
     {
-        path: "/hot/lines/:lineId/:stopId",
+        path: "/hot/line/:lineId/:stopId",
         name: "hot-stop",
         component: HotStopView,
         meta: {

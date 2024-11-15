@@ -10,13 +10,13 @@
 import {Vue, Component, Prop} from 'vue-facing-decorator';
 import {isNotUndefined} from "@/utils/Types";
 import {linesColors} from "@/utils/TamColorMap";
-import {LineModel} from "@/models/LineModel";
+import {LineModelUnit} from "@/models/LineModelUnit";
 
 @Component({})
 export default class TamLineTile extends Vue {
 
   @Prop
-  private line?: LineModel;
+  private line?: LineModelUnit;
 
   // ------------------------------------------------------------------------------------------------------------------
 

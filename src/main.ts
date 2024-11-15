@@ -8,7 +8,10 @@ import { createVuetify } from 'vuetify'
 import * as components from 'vuetify/components'
 import * as labsComponents from 'vuetify/labs/components'
 import * as directives from 'vuetify/directives'
+//
+
 import { vMaska } from "maska"
+import { createPinia } from 'pinia'
 
 import "@mdi/font/css/materialdesignicons.css";
 
@@ -18,6 +21,8 @@ const vuetify = createVuetify({
         ...labsComponents,
     },
     directives
-})
+});
 
-createApp(App).directive("maska",vMaska).use(router).use(vuetify).mount('#app')
+const pinia = createPinia();
+
+createApp(App).use(pinia).directive("maska",vMaska).use(router).use(vuetify).mount('#app')

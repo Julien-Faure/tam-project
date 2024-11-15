@@ -20,6 +20,8 @@ export default class HotStopView extends Vue {
       const stopId = this.$route.params.stopId as string;
 
       console.log(lineId, stopId);
+
+      this.data = "";
   }
 
 }
